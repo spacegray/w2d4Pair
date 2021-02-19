@@ -15,17 +15,14 @@ hidden2(); // returns 1
 
 ***********************************************************************/
 
-function hiddenCounter(){
-  let clock = 0;
-  return () => (clock += 1);
+const hiddenCounter = () => {
+  let count = 0;
+  return function(){
+    count++;
+    return count;
+  }
 }
 
-let hidden1 = hiddenCounter(); //returns a function
-console.log(hidden1()); // returns 1
-console.log(hidden1()); // returns 2
-
-let hidden2 = hiddenCounter(); // returns a function
-hidden2(); // returns 1
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

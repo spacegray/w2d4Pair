@@ -42,8 +42,20 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   be useful
 ***********************************************************************/
 
-// your code here
-
+function curriedSum(numArgs){
+  let count = 0;
+  let sum = 0;
+  function wow(num){
+    count++;
+    sum += num;
+    if(count === numArgs){
+      return sum;
+    } else {
+      return wow;
+    }
+  }
+  return wow;
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

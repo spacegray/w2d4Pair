@@ -22,7 +22,12 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// your code here
+const smoothieMachine = (...params1) =>{
+  return function (...params2){
+    params1 = params1.concat(params2);
+    return "I'm having a smoothie with " + params1.join(" and ");
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

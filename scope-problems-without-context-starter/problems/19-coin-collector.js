@@ -25,7 +25,19 @@ Example 3:
 
 ***********************************************************************/
 
-// your code here
+function coinCollector(numCoins){
+  let count = 0;
+  let ans = [];
+  return function(coin){
+    count++;
+    ans.push(coin);
+    if(count === numCoins){
+      return ans;
+    } else {
+      return this;
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

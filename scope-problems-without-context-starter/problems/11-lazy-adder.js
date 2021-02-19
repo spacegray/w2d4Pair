@@ -22,7 +22,13 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
   fat-arrow function
 ***********************************************************************/
 
-// your code here
+const lazyAdder = function(firstNum){
+  return function func1(secondNum){
+    return function func2(thirdNum){
+      return firstNum + secondNum + thirdNum;
+    };
+  };
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

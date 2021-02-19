@@ -29,21 +29,18 @@ Example 4:
 ***********************************************************************/
 
 function countDownTimer(n){
-  let counter = 0;
-  let i = 0;
-  while (n > 0){
-    if (n === 3)
-  }
-  if (n === 0){
+  if (n <= 0){
     return "Happy New Year!";
-  }
-
-}
-
-function countDownTimer(n){
-  let check = n;
-  if (check > 0){
-    //return function here? not sure
+  } else {
+    function wow(){
+      n -= 1;
+      if( n === 0){
+        return "Happy New Year!"
+      } else {
+        return this;
+      }
+    }
+    return wow;
   }
 }
 

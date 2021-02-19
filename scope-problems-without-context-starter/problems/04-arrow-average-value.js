@@ -11,11 +11,11 @@ arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
 
 const arrowAvgValue = array => {
-  let sum = 0;
-  array.forEach(el => sum += el)
-  return sum / array.length;
+  let sum = array.reduce( (accum, el) => {
+    return accum + el;
+  }, 0);
+  return sum/array.length;
 }
-console.log(arrowAvgValue([100, 60, 64])); // => 74.66666666666667
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
