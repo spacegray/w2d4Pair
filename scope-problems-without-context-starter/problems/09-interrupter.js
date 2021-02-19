@@ -1,7 +1,7 @@
 /***********************************************************************
 Write a function named: interrupter(interruptingWord). The interrupter function will
-accept a word and return a function. 
-When the function returned by interrupter is invoked with a string 
+accept a word and return a function.
+When the function returned by interrupter is invoked with a string
 the string will be returned with "interruptions".
 
 
@@ -9,14 +9,30 @@ the string will be returned with "interruptions".
 
 ***********************************************************************/
 
-function interrupter(interruptingWord) {
-  let inter = interruptingWord;
-  function inner() {
-    inter.split(' ')
-    return 
-  } 
-}
+// function interrupter(interruptingWord) {
+//   // let inter = interruptingWord;
+//   // function inner() {
+//   //   inter.split(' ')
+//   //   return
+//   // }
+// }
 
+function interrupter(interruptingWord) {
+  return function (sentence) {
+    let words = sentence.split(" ");
+    let newString = "";
+    for (let i = 0 ; i < words.length; i++){
+      let el = words[i];
+      if (el === words[words.length-1]){
+        newString += el;
+      } else {
+        newString += el + " " + interruptingWord + " ";
+      }
+    }
+    return newString;
+  }
+
+}
 
 // Look below to see how this function is invoked:
 let rudePerson = interrupter("what"); // => returns a function

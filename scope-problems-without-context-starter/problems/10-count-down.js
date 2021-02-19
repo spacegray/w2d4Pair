@@ -1,11 +1,11 @@
 /***********************************************************************
 Write a function named: countDownTimer(n). This function will represent a count
-down of days till the New Year. The countDownTimer function will 
+down of days till the New Year. The countDownTimer function will
 take in a number argument (n) the first time it is called and if that
 number is greater than 0 the countDownTimer will return a function.
 
-The function returned by countDownTimer can then be invoked n times before it 
-returns a string of "Happy New Year!". Look closely at how this function is 
+The function returned by countDownTimer can then be invoked n times before it
+returns a string of "Happy New Year!". Look closely at how this function is
 invoked below:
 
 Example 1:
@@ -28,7 +28,24 @@ Example 4:
 
 ***********************************************************************/
 
-// your code here
+function countDownTimer(n){
+  let counter = 0;
+  let i = 0;
+  while (n > 0){
+    if (n === 3)
+  }
+  if (n === 0){
+    return "Happy New Year!";
+  }
+
+}
+
+function countDownTimer(n){
+  let check = n;
+  if (check > 0){
+    //return function here? not sure
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
